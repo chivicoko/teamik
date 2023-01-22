@@ -27,7 +27,7 @@ const Employees = ({employees, teams, handleEmployeeCardClick, handleTeamSelecti
                             onClick={handleEmployeeCardClick}
                             key={employee.id}
                         >
-                            <h1>{employee.id}</h1>
+                            <h1> {employee.gender === 'male' ? '👓' : '🤎'}</h1>
                             <img className='card-img-top rounded' src={employee.gender === 'male' ? maleProfileImage : femaleProfileImage} alt={employee.gender === 'male' ? "Male Profile Picture" : "Female Profile Picture"} />
                             <div className='card-body'>
                                 <h5 className='card-title'><strong>Full Name:</strong> {employee.fullName}</h5>

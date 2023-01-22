@@ -1,10 +1,14 @@
 import './App.css';
+import Nav from './components/Nav';
 import Header from './components/Header';
-import Content from './components/Content';
 import Footer from './components/Footer';
 import Employees from './components/Employees';
+import GroupedTeamMembers from './components/GroupedTeamMembers';
+import NotFound from './components/NotFound';
 import { useEffect, useState } from 'react';
-import { BrowserRouter as Routes, Route, Router } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// import { BrowserRouter as Routes, Route, Router } from 'react-router-dom';
+
 
 
 function App() {
@@ -119,7 +123,8 @@ function App() {
   }
 
   return (
-    <Router>
+    <BrowserRouter>
+      <Nav />
       <Header
         teams={teams}
         teamMemberCount={employees.filter((employee) => employee.teamName === teams).length}
@@ -135,9 +140,10 @@ function App() {
         }>
         </Route>
         <Route path='/GroupedTeamMembers' element={<GroupedTeamMembers />}></Route>
+        <Route path='*' element={<NotFound />}></Route>
       </Routes>
       <Footer />
-    </Router>
+    </BrowserRouter>
   );
 }
 
