@@ -7,6 +7,7 @@ import GroupedTeamMembers from './components/GroupedTeamMembers';
 import NotFound from './components/NotFound';
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Loader from './components/Loader';
 // import { BrowserRouter as Routes, Route, Router } from 'react-router-dom';
 
 
@@ -121,9 +122,16 @@ function App() {
 
       setEmployees(employeeCard);
   }
+  
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 3000)
+  }, [])
 
   return (
     <BrowserRouter>
+      {loading && <Loader />}
       <Nav />
       <Header
         teams={teams}

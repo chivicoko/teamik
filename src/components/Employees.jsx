@@ -1,6 +1,6 @@
-import React from 'react'
-import maleProfileImage from '../images/maleProfileImage.png'
-import femaleProfileImage from '../images/femaleProfileImage.jpg'
+import React from 'react';
+import maleProfileImage from '../images/maleProfileImage.png';
+import femaleProfileImage from '../images/femaleProfileImage.jpg';
 
 
 const Employees = ({employees, teams, handleEmployeeCardClick, handleTeamSelectionChange}) => {
@@ -10,10 +10,10 @@ const Employees = ({employees, teams, handleEmployeeCardClick, handleTeamSelecti
         <div className='row justify-content-center my-3 sticky-top'>
             <div className='col-6'>
                 <select className="form-select form-select-lg" value={teams} onChange={handleTeamSelectionChange}>
-                    <option value="TeamA">TeamA</option>
-                    <option value="TeamB">TeamB</option>
-                    <option value="TeamC">TeamC</option>
-                    <option value="TeamD">TeamD</option>
+                    <option value="TeamA">Team One (School(s) Management)</option>
+                    <option value="TeamB">Team Two (Flavor Junction Restaurant Management)</option>
+                    <option value="TeamC">Team Three (Blopz Rider App Management)</option>
+                    <option value="TeamD">Team Four (School Management)</option>
                 </select>
             </div>
         </div>
@@ -27,10 +27,10 @@ const Employees = ({employees, teams, handleEmployeeCardClick, handleTeamSelecti
                             onClick={handleEmployeeCardClick}
                             key={employee.id}
                         >
-                            <h1> {employee.gender === 'male' ? '👓' : '🤎'}</h1>
+                            <h5> {employee.fullName} {employee.gender === 'male' ? '👓' : '🤎'}</h5>
                             <img className='card-img-top rounded' src={employee.gender === 'male' ? maleProfileImage : femaleProfileImage} alt={employee.gender === 'male' ? "Male Profile Picture" : "Female Profile Picture"} />
                             <div className='card-body'>
-                                <h5 className='card-title'><strong>Full Name:</strong> {employee.fullName}</h5>
+                                {/* <h5 className='card-title'><strong>Full Name:</strong> {employee.fullName}</h5> */}
                                 <p className='card-text'><strong>Designation:</strong> {employee.designation}</p>
                             </div>
                         </div>
