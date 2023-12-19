@@ -186,7 +186,7 @@ function App() {
       {loading && <Loader />}
       <Nav />
       <Routes>
-        <Route path='/' element={
+        <Route path='/teamik' element={
           <Employees
             employees={employees}
             teams={teams}
