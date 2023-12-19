@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/teamik/static/css/main.d7d2dba0.css",
+    "main.js": "/teamik/static/js/main.02df3400.js",
+    "index.html": "/teamik/index.html",
+    "main.d7d2dba0.css.map": "/teamik/static/css/main.d7d2dba0.css.map",
+    "main.02df3400.js.map": "/teamik/static/js/main.02df3400.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7d2dba0.css",
+    "static/js/main.02df3400.js"
+  ]
+}
