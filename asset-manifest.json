@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/teamik/static/css/main.d7d2dba0.css",
-    "main.js": "/teamik/static/js/main.60c4dfcb.js",
+    "main.css": "/teamik/static/css/main.db196e24.css",
+    "main.js": "/teamik/static/js/main.9ed73722.js",
     "index.html": "/teamik/index.html",
-    "main.d7d2dba0.css.map": "/teamik/static/css/main.d7d2dba0.css.map",
-    "main.60c4dfcb.js.map": "/teamik/static/js/main.60c4dfcb.js.map"
+    "main.db196e24.css.map": "/teamik/static/css/main.db196e24.css.map",
+    "main.9ed73722.js.map": "/teamik/static/js/main.9ed73722.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7d2dba0.css",
-    "static/js/main.60c4dfcb.js"
+    "static/css/main.db196e24.css",
+    "static/js/main.9ed73722.js"
   ]
 }
