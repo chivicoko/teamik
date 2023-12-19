@@ -4,9 +4,9 @@ import styles from '../styles.module.css';
 
 const Nav = () => {
   return (
-    <nav className='navbar navbar-expand-lg navbar-light px-5 bg-light d-flex justify-content-between align-items-center bg-dark' id={styles.navbar}>
-      <div className="logo"><h1 className='text-light'>Teamik</h1></div>
-      <ul className='navbar-nav border d-flex justify-content-center align-items-center'>
+    <nav className='navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between align-items-center bg-dark' id={styles.navbar}>
+      <div className="logo"><h1 className='text-light'><Link to='/'>Teamik</Link></h1></div>
+      <ul className='navbar-nav border d-flex justify-content-between align-items-center'>
           <li className='nav-item'>
               <Link className='nav-link text-light' to='/'>Home</Link>
           </li>
@@ -15,7 +15,7 @@ const Nav = () => {
               <Link className='nav-link text-light' to='/GroupedTeamMembers'>Teams</Link>
           </li>
       </ul>
-      <div><h5 className="hello text-light">Say Hi 💇‍♂️</h5></div>
+      <div><h5 className="hello text-light"><a href='https://www.victorokoye.com' target='_blank' rel="noreferrer">Say Hi 💇‍♂️</a></h5></div>
     </nav>
   )
 }

@@ -4,15 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    /* background: red; */
-}
-#navbar, footer {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background: linear-gradient(90deg, #e63b1f 0%, #3A1C71 100%);
-}
-
-
 /* loader */
 .loading__screen {
     position: fixed;

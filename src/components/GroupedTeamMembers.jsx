@@ -36,24 +36,24 @@ const GroupedTeamMembers = ({employees, teams, setTeams}) => {
     }
 
   return (
-    <main className='container'>
+    <main className='container pt-5'>
         {
             groupedEmployees.map((item) => {
                 return (
-                    <div key={item.team} className='card mt-2 text-center' style={{cursor: 'pointer'}}>
-                        <h4 id={item.team} className='card-header bg-white text-secondary' onClick={handleTeamClick}>
-                            Team Name: {item.team}
+                    <div key={item.team} className='card group__card mt-4' style={{cursor: 'pointer'}}>
+                        <h4 id={item.team} className='card-header' onClick={handleTeamClick}>
+                            Team Name: <span>{item.team}</span>
                         </h4>
-                        <div id={'collapse_' + item.team} className={item.collapsed === true ? 'collapse' : ''}>
+                        <div id={'collapse_' + item.team} className={item.collapsed === true ? 'collapse grouped' : 'grouped'}>
                             <hr/>
                             {
                                 item.members.map(member => {
                                     return (
-                                        <div className='mt-2'>
+                                        <div className='mt-2 group__item'>
                                             <h5 className='card-title mt-2'>
-                                                <span className='text-dark'>Full Name: {member.fullName}</span>
+                                                <span className=''>{member.fullName}</span>
                                             </h5>
-                                            <p>Designation: {member.designation}</p>
+                                            <p>{member.designation}</p>
                                         </div>
                                     );
                                 })

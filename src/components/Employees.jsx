@@ -9,12 +9,12 @@ const Employees = ({employees, teams, handleEmployeeCardClick, handleTeamSelecti
   return (
     <main className='container'>
         <div className='row justify-content-center my-3 sticky-top'>
-            <div className='col-6'>
+            <div className='col-sm-12 col-md-6 col-lg-6'>
                 <select className="form-select form-select-lg" value={teams} onChange={handleTeamSelectionChange}>
-                    <option value="TeamA">Team One (School(s) Management)</option>
-                    <option value="TeamB">Team Two (Flavor Junction Restaurant Management)</option>
-                    <option value="TeamC">Team Three (Blopz Rider App Management)</option>
-                    <option value="TeamD">Team Four (School Management)</option>  
+                    <option className='option' value="TeamA">Team One <span className='span'>(School(s) Management)</span></option>
+                    <option className='option' value="TeamB">Team Two <span className='span'>(Flavor Junction Restaurant Management)</span></option>
+                    <option className='option' value="TeamC">Team Three <span className='span'>(Blopz Rider App Management)</span></option>
+                    <option className='option' value="TeamD">Team Four <span className='span'>(School Management)</span></option>  
                 </select>
 
                 <Header
@@ -29,14 +29,14 @@ const Employees = ({employees, teams, handleEmployeeCardClick, handleTeamSelecti
                     return (
                         <div 
                             id={employee.id}
-                            className= {(employee.teamName === teams ? 'card col-3 text-center py-2 m-2 showUnique' : 'card col-3 text-center py-2 m-2')}
+                            className= {(employee.teamName === teams ? 'card cardItem col-3 text-center py-2 m-2 showUnique' : 'card cardItem col-3 text-center py-2 m-2')}
                             style={{ cursor: 'pointer' }}
                             onClick={handleEmployeeCardClick}
                             key={employee.id}
                         >
                             <img id='card__img' className='card-img-top' src={employee.gender === 'male' ? maleProfileImage : femaleProfileImage} alt={employee.gender === 'male' ? "Male Profile Picture" : "Female Profile Picture"} />
                             <div className='card-body'>
-                                <h5> {employee.fullName} {employee.gender === 'male' ? '👓' : '🤎'}</h5>
+                                <h4> {employee.fullName} {employee.gender === 'male' ? '👓' : '🤎'}</h4>
                                 <h6 className='card-title'><strong>{employee.pesowpId}</strong></h6>
                                 <p className='card-text'><strong>{employee.designation}</strong></p>
                             </div>
