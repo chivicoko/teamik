@@ -36,7 +36,7 @@ const Employees = ({employees, teams, handleEmployeeCardClick, handleTeamSelecti
                         >
                             <img id='card__img' className='card-img-top' src={employee.gender === 'male' ? maleProfileImage : femaleProfileImage} alt={employee.gender === 'male' ? "Male Profile Picture" : "Female Profile Picture"} />
                             <div className='card-body'>
-                                <h4>🤎 {employee.fullName} 🤎</h4>
+                                <h4>{employee.fullName}</h4>
                                 <h6 className='card-title'><strong>{employee.pesowpId}</strong></h6>
                                 <p className='card-text'><strong>{employee.designation}</strong></p>
                             </div>
