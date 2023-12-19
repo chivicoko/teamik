@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/teamik/static/css/main.db196e24.css",
-    "main.js": "/teamik/static/js/main.9ed73722.js",
+    "main.js": "/teamik/static/js/main.b48b3390.js",
     "index.html": "/teamik/index.html",
     "main.db196e24.css.map": "/teamik/static/css/main.db196e24.css.map",
-    "main.9ed73722.js.map": "/teamik/static/js/main.9ed73722.js.map"
+    "main.b48b3390.js.map": "/teamik/static/js/main.b48b3390.js.map"
   },
   "entrypoints": [
     "static/css/main.db196e24.css",
-    "static/js/main.9ed73722.js"
+    "static/js/main.b48b3390.js"
   ]
 }
