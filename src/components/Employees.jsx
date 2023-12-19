@@ -8,7 +8,7 @@ const Employees = ({employees, teams, handleEmployeeCardClick, handleTeamSelecti
 
   return (
     <main className='container'>
-        <div className='row justify-content-center my-3 sticky-top'>
+        <div className='row justify-content-center my- sticky-top'>
             <div className='col-sm-12 col-md-6 col-lg-6'>
                 <select className="form-select form-select-lg" value={teams} onChange={handleTeamSelectionChange}>
                     <option className='option' value="TeamA">Team One <span className='span'>(School(s) Management)</span></option>
