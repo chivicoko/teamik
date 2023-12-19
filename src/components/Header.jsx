@@ -5,8 +5,7 @@ const Header = ({teams, teamMemberCount}) => {
     <header className='container'>
         <div className='row justify-content-center mt-3 mb-4'>
             <div className='col-6 text-center'>
-                <h1>Team member Count</h1>
-                <h3>{teams} has {teamMemberCount} {teamMemberCount === 1 || teamMemberCount === 0 ? 'Member' : 'Members'}</h3>
+                <h5 className='team__member__count'>{teams} has {teamMemberCount} {teamMemberCount === 1 || teamMemberCount === 0 ? 'Member' : 'Members'}</h5>
             </div>
         </div>
     </header>

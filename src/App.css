@@ -2,11 +2,30 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.showUnique {
-  /* box-shadow: rgba(0, 0, 0, .16) 0px 1px 4px 1px, rgb(51, 51, 51) 0px 0px 5px 3px;
-  background: #000 !important; */
+.card {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.7) 100%);
+  transition: transform 0.5s linear;
+}
+
+.card #card__img {
+  border-bottom-left-radius: 50%;  
+  border-bottom-right-radius: 50%;  
+}
+
+.card:hover #card__img {
+  transform: scale(1.06);
+}
+
+.team__member__count {
+  padding: 5px 10px;
+  background: linear-gradient(-145deg, #e63b1f 0%, #3A1C71 100%);
   color: #fff;
-  
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  background: linear-gradient(-145deg, #e63b1f 0%, #3A1C71 100%) !important;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.showUnique {
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.87) 5px 5px 0px, rgba(0, 0, 0, 0.87) -5px -5px 0px, rgba(0, 0, 0, 0.87) 5px 5px 0px 0px, rgba(0, 0, 0, 0.87) -5px -5px 0px 0px;
+  background: linear-gradient(-145deg, #e63b1f 0%, #3A1C71 100%);
 }

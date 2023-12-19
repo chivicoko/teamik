@@ -1,6 +1,5 @@
 import './App.css';
 import Nav from './components/Nav';
-import Header from './components/Header';
 import Footer from './components/Footer';
 import Employees from './components/Employees';
 import GroupedTeamMembers from './components/GroupedTeamMembers';
@@ -20,85 +19,138 @@ function App() {
     fullName: "Bob Jones",
     designation: "JavaScript Developer",
     gender: "male",
-    teamName: "TeamA"
+    teamName: "TeamA",
+    pesowpId: "PESOWP/ST/01"
   },
   {
     id: 2,
     fullName: "Jill Bailey",
     designation: "Node Developer",
     gender: "female",
-    teamName: "TeamA"
+    teamName: "TeamA",
+    pesowpId: "PESOWP/ST/02"
   },
   {
     id: 3,
     fullName: "Gail Shepherd",
     designation: "Java Developer",
     gender: "female",
-    teamName: "TeamA"
+    teamName: "TeamA",
+    pesowpId: "PESOWP/ST/03"
   },
   {
     id: 4,
     fullName: "Sam Reynolds",
     designation: "React Developer",
     gender: "male",
-    teamName: "TeamB"
+    teamName: "TeamB",
+    pesowpId: "PESOWP/ST/04"
   },
   {
     id: 5,
     fullName: "David Henry",
-    designation: "DotNet Developer",
+    designation: "Flutter Developer",
     gender: "male",
-    teamName: "TeamB"
+    teamName: "TeamB",
+    pesowpId: "PESOWP/ST/05"
   },
   {
     id: 6,
     fullName: "Sarah Blake",
     designation: "SQL Server DBA",
     gender: "female",
-    teamName: "TeamB"
+    teamName: "TeamB",
+    pesowpId: "PESOWP/ST/06"
   },
   {
     id: 7,
     fullName: "James Bennet",
-    designation: "Angular Developer",
+    designation: "PHP Developer",
     gender: "male",
-    teamName: "TeamC"
+    teamName: "TeamC",
+    pesowpId: "PESOWP/ST/07"
   },
   {
     id: 8,
     fullName: "Jessica Faye",
-    designation: "API Developer",
+    designation: "Product Designer",
     gender: "female",
-    teamName: "TeamC"
+    teamName: "TeamC",
+    pesowpId: "PESOWP/ST/08"
   },
   {
     id: 9,
     fullName: "Lita Stone",
     designation: "C++ Developer",
     gender: "female",
-    teamName: "TeamC"
+    teamName: "TeamC",
+    pesowpId: "PESOWP/ST/09"
   },
   {
     id: 10,
     fullName: "Daniel Young",
     designation: "Python Developer",
     gender: "male",
-    teamName: "TeamD"
+    teamName: "TeamD",
+    pesowpId: "PESOWP/ST/010"
   },
   {
     id: 11,
     fullName: "Adrian Jacobs",
     designation: "Vue Developer",
     gender: "male",
-    teamName: "TeamD"
+    teamName: "TeamD",
+    pesowpId: "PESOWP/ST/011"
   },
   {
     id: 12,
     fullName: "Devin Monroe",
     designation: "Graphic Designer",
     gender: "male",
-    teamName: "TeamD"
-  }];
+    teamName: "TeamD",
+    pesowpId: "PESOWP/ST/012"
+  },
+  {
+    id: 13,
+    fullName: "Victor Emmanuel",
+    designation: "ReactJs Designer",
+    gender: "male",
+    teamName: "TeamA",
+    pesowpId: "PESOWP/ST/013"
+  },
+  {
+    id: 14,
+    fullName: "Kent Onyema",
+    designation: "Flutter Developer (Intern)",
+    gender: "female",
+    teamName: "TeamD",
+    pesowpId: "PESOWP/ST/014"
+  },
+  {
+    id: 15,
+    fullName: "Ifeoma Victoria",
+    designation: "Python Developer",
+    gender: "female",
+    teamName: "TeamB",
+    pesowpId: "PESOWP/ST/015"
+  },
+  {
+    id: 16,
+    fullName: "Ani Marcus",
+    designation: "Data Analyst",
+    gender: "male",
+    teamName: "TeamD",
+    pesowpId: "PESOWP/ST/016"
+  },
+  {
+    id: 17,
+    fullName: "Chibuzo Agbo",
+    designation: "Data Engineer",
+    gender: "male",
+    teamName: "TeamC",
+    pesowpId: "PESOWP/ST/017"
+  }
+];
 
   const [employees, setEmployees] = useState(JSON.parse(localStorage.getItem('employeeList')) || employeeDetails);
   const [teams, setTeams] = useState(JSON.parse(localStorage.getItem('teams')) || "TeamC");
@@ -126,17 +178,13 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 3000)
+    setTimeout(() => setLoading(false), 1500)
   }, [])
 
   return (
     <BrowserRouter>
       {loading && <Loader />}
       <Nav />
-      <Header
-        teams={teams}
-        teamMemberCount={employees.filter((employee) => employee.teamName === teams).length}
-      />
       <Routes>
         <Route path='/' element={
           <Employees
